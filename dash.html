@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARBON REWARDS</title>
+  <link rel="stylesheet" href="staticFiles/dash.css">
+  <!-- box icon -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<div class="grid">
+    <header class="header">
+      <i class="fas fa-bars header__menu"></i>
+      <div class="header__search">
+        <input class="header__input" placeholder="Search..." />
+      </div>
+      <div class="header__avatar">
+        <div class="dropdown">
+          <ul class="dropdown__list">
+            <li class="dropdown__list-item">
+              <span class="dropdown__icon"><i class="far fa-user"></i></span>
+              <span class="dropdown__title">my profile</span>
+            </li>
+            <li class="dropdown__list-item">
+              <span class="dropdown__icon"><i class="fas fa-clipboard-list"></i></span>
+              <span class="dropdown__title">my account</span>
+            </li>
+            <li class="dropdown__list-item">
+              <span class="dropdown__icon"><i class="fas fa-sign-out-alt"></i></span>
+              <span class="dropdown__title">log out</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  
+    
+  
+    <main class="main">
+      <div class="main-header">
+        <div class="main-header__intro-wrapper">
+          <div class="main-header__welcome">
+            <div class="main-header__welcome-title text-light">Today's fact</div>
+            <div class="main-header__welcome-subtitle text-light">A child born today might not breathe clean air until they are 8</div>
+          </div>
+          <div class="quickview">
+            <div class="quickview__item">
+              <div class="quickview__item-total">64</div>
+              <div class="quickview__item-description">
+                <i class="far fa-comment"></i>
+                <span class="text-light">Notifications</span>
+              </div>
+            </div>
+            <div class="quickview__item">
+              <div class="quickview__item-total">27&deg;</div>
+              <div class="quickview__item-description">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="text-light">Pune</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-overview">
+        <div class="overviewCard">
+          <div class="overviewCard-icon overviewCard-icon--document">
+             <i class="far fa-file-alt"></i>
+          </div>
+          
+          <div class="overviewCard-description">
+            <h3 class="overviewCard-title text-light">Your  <strong>Score</strong></h3>
+            {% for item in items %}
+            <p class="overviewCard-subtitle">{{item[0]}}</p>
+            {% endfor %}
+          </div>
+         
+        </div>
+        <div class="overviewCard">
+          <div class="overviewCard-icon overviewCard-icon--calendar">
+             <i class="far fa-calendar-check"></i>
+          </div>
+          <div class="overviewCard-description">
+            <h3 class="overviewCard-title text-light">Your <strong>Connections</strong></h3>
+            <p class="overviewCard-subtitle">32 friends</p>
+          </div>
+        </div>
+        <div class="overviewCard">
+          <div class="overviewCard-icon overviewCard-icon--mail">
+             <i class="far fa-envelope"></i>
+          </div>
+          <div class="overviewCard-description">
+            <h3 class="overviewCard-title text-light">Suggestions <strong></strong></h3>
+            <p class="overviewCard-subtitle">+4</p>
+          </div>
+        </div>
+        <div class="overviewCard">
+          <div class="overviewCard-icon overviewCard-icon--photo">
+             <i class="far fa-file-image"></i>
+          </div>
+          <div class="overviewCard-description">
+            <h3 class="overviewCard-title text-light">FAQs<strong></strong></h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__header-title text-light">Current <strong>Data</strong>
+              <a href="#" class="card__header-link text-bold">View All</a>
+            </div>
+            <div class="settings">
+              <div class="settings__block"><i class="fas fa-edit"></i></div>
+              <div class="settings__block"><i class="fas fa-cog"></i></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="documents">
+              <div class="document">
+                <div class="document__img"></div>
+                <div class="document__title">CO2 value</div>
+                <div class="document__date">1280 ppm</div>
+              </div>
+              <div class="document">
+                <div class="document__img"></div>
+                <div class="document__title">your points</div>
+                <div class="document__date">380 pts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card--finance">
+            <div class="card__header">
+              <div class="card__header-title text-light">Live <strong>Graph</strong>
+              </div>
+            </div>
+            <div id="chartdiv"></div>
+          </div>
+      </div> <!-- /.main-cards -->
+    </main>
+  </div>
+</body>
